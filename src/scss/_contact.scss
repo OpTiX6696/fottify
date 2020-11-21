@@ -68,9 +68,8 @@
             margin: 0 auto;
             width: 150px;
             height: 40px;
-            font-weight: lighter;
             font-size: 20px;
-            // border-radius: 5px;
+            border-radius: 5px;
             border: none;
             // box-shadow: 0.1px 0.1px 7px 0.1px lighten($purple, 5%);
             background-color: $purple;
@@ -84,7 +83,7 @@
         margin: 0 auto;
         display: grid;
         gap: 20px;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         justify-content: center;
         align-items: start;  
         text-align: center;      
@@ -97,12 +96,12 @@
         justify-content: center;
         align-items: center;
 
-        h5 {
-            margin-bottom: 15px;
+        &:nth-child(2) {
+            display: none;
         }
 
-        p {
-            font-weight: lighter;
+        h5 {
+            margin-bottom: 15px;
         }
     }
 
@@ -212,6 +211,10 @@
             }
         }
 
+        &__item:nth-child(2) {
+            display: flex;
+        }
+
         form {
 
             .user__info {
@@ -269,6 +272,9 @@
     .contact__icon {
         width: 40px;
         height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
 }
